@@ -1,6 +1,6 @@
 # AWS Lambda SQL Runtime
 
-This is one of AWS Lambda crazy runtime series.
+This is one of the AWS Lambda crazy runtime series that can execute SQL on AWS Lambda.
 
 ![execute image](./assets/aws-lambda-sql-runtime-example.gif)
 
