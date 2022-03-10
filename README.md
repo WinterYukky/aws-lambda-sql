@@ -2,6 +2,9 @@
 
 This is one of the AWS Lambda crazy runtime series that can execute SQL on AWS Lambda.
 
+[![test status](https://github.com/WinterYukky/aws-lambda-sql-runtime/actions/workflows/test.yml/badge.svg?branch=main "test status")](https://github.com/WinterYukky/aws-lambda-sql-runtime/actions)
+[![MIT license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
+
 ![execute image](./assets/aws-lambda-sql-runtime-example.gif)
 
 ## Install
