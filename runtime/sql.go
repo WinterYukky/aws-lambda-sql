@@ -20,9 +20,9 @@ type FileReader interface {
 	Read(filename string) ([]byte, error)
 }
 
-func NewAWSLambdaSQLRuntime(r FileReader) *AWSLambdaSQLRuntime {
+func NewAWSLambdaSQLRuntime(fileReader FileReader) *AWSLambdaSQLRuntime {
 	return &AWSLambdaSQLRuntime{
-		reader: r,
+		reader: fileReader,
 	}
 }
 
