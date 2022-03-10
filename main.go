@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"log"
 
-	"github.com/WinterYukky/aws-lambda-sql/runtime"
+	"github.com/WinterYukky/aws-lambda-sql-runtime/runtime"
 
 	crkit "github.com/WinterYukky/aws-lambda-custom-runtime-kit"
 )

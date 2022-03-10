@@ -1,4 +1,4 @@
-module github.com/WinterYukky/aws-lambda-sql
+module github.com/WinterYukky/aws-lambda-sql-runtime
 
 go 1.17
 
