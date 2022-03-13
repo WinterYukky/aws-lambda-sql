@@ -90,3 +90,7 @@ START RequestId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx Version: $LATEST
 END RequestId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 REPORT RequestId: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx	Duration: 133.09 ms	Billed Duration: 222 ms	Memory Size: 128 MB	Max Memory Used: 24 MB	Init Duration: 88.90 ms	
 ```
+
+## Note
+This runtime executes queries every semicolon so when appear semicolon in quote string or comments then this runtime not works.
+It also doesn't work if the comment appears after the last query.
