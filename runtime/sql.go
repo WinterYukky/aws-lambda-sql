@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strings"
 
 	crkit "github.com/WinterYukky/aws-lambda-custom-runtime-kit"
 	"github.com/mattn/go-sqlite3"
@@ -90,8 +91,18 @@ func printUDF(value interface{}) string {
 }
 func (a *AWSLambdaSQLRuntime) invoke(db *gorm.DB) (map[string]interface{}, error) {
 	var result map[string]interface{}
-	if err := db.Raw(string(a.handler)).Scan(&result).Error; err != nil {
-		return nil, fmt.Errorf("failed to execute query: %v", err)
+	source := strings.TrimSuffix(strings.TrimSpace(string(a.handler)), ";")
+	queries := strings.Split(source, ";")
+	for i, query := range queries {
+		if i != len(queries)-1 {
+			if err := db.Exec(query).Error; err != nil {
+				return nil, fmt.Errorf("failed to execute query: %v", err)
+			}
+			continue
+		}
+		if err := db.Raw(query).Scan(&result).Error; err != nil {
+			return nil, fmt.Errorf("failed to execute query: %v", err)
+		}
 	}
 	return result, nil
 }
