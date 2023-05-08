@@ -7,7 +7,7 @@ require (
 	github.com/mattn/go-sqlite3 v1.14.16
 	github.com/tidwall/gjson v1.14.4
 	gorm.io/driver/sqlite v1.5.0
-	gorm.io/gorm v1.25.0
+	gorm.io/gorm v1.25.1
 )
 
 require (
