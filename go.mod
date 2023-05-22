@@ -6,7 +6,7 @@ require (
 	github.com/WinterYukky/aws-lambda-custom-runtime-kit v0.1.2
 	github.com/mattn/go-sqlite3 v1.14.16
 	github.com/tidwall/gjson v1.14.4
-	gorm.io/driver/sqlite v1.5.0
+	gorm.io/driver/sqlite v1.5.1
 	gorm.io/gorm v1.25.1
 )
 
